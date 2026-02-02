@@ -25,6 +25,15 @@ const UploadPdf = ({ onUploadSuccess }) => {
     loadRecent();
   }, []);
 
+  // Auto-dismiss successful messages after a short delay
+  useEffect(() => {
+    if (message && !error) {
+      const t = setTimeout(() => clearMessage(), 4500);
+      return () => clearTimeout(t);
+    }
+    return undefined;
+  }, [message, error]);
+
   const handleFileUpload = async (file) => {
     if (!file) return;
 
@@ -170,11 +179,14 @@ const UploadPdf = ({ onUploadSuccess }) => {
       </div>
 
       {message && (
-        <div className={`mt-4 p-3 rounded-md flex items-center gap-2 ${error ? 'bg-red-50 text-red-700' : 'bg-green-50 text-green-700'}`}>
+        <div className={`mt-4 p-3 rounded-md flex items-start gap-3 ${error ? 'bg-red-50 text-red-700' : 'bg-green-50 text-green-700'}`}>
           {error ? <AlertCircle size={20} /> : <CheckCircle size={20} />}
-          <div className="flex-1 flex items-center justify-between">
-            <span className="truncate">{message}</span>
-            <button onClick={clearMessage} className="text-xs text-gray-500 ml-3">Dismiss</button>
+
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center justify-between gap-3">
+              <p className="text-sm leading-snug break-words whitespace-normal">{message}</p>
+              <button onClick={clearMessage} className="text-xs text-gray-500 ml-3">Dismiss</button>
+            </div>
           </div>
         </div>
       )}
