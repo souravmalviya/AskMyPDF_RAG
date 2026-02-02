@@ -42,27 +42,28 @@ function App() {
 
       <div className="max-w-6xl mx-auto px-6 py-12">
         <header className="mb-10">
-  <div className="w-full flex items-center justify-center">
-    <div className="flex items-center gap-6 bg-white/60 backdrop-blur-sm px-6 py-4 rounded-xl border border-white/30 shadow-md fade-in-up">
-      <div className="w-1.5 h-12 bg-gradient-to-b from-indigo-600 to-sky-500 rounded" />
+  <div className="w-full bg-white/60 backdrop-blur-sm rounded-xl border border-white/30 shadow-md fade-in-up px-6 py-8">
+    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-4">
+      {/* left spacer aligns with upload column */}
+      <div className="hidden md:block" />
 
-      <div className="flex flex-col">
-        <div className="flex items-baseline gap-3">
-          <h1 className="text-3xl md:text-4xl font-serif font-semibold text-slate-800 tracking-tight">Ask <span className="text-slate-700">My</span></h1>
-          <span className="ml-2 px-3 py-1 rounded-lg bg-gradient-to-r from-indigo-600 to-sky-500 text-white font-medium shadow-sm text-lg">PDF</span>
+      {/* Center content */}
+      <div className="col-span-1 md:col-span-1 flex flex-col items-center justify-center text-center">
+        <div className="flex items-baseline gap-4">
+          <h1 className="text-4xl md:text-5xl font-serif font-semibold text-slate-800 tracking-tight">Ask <span className="text-slate-700">My</span></h1>
+          <span className="ml-2 px-4 py-1 rounded-lg bg-gradient-to-r from-indigo-600 to-sky-500 text-white font-medium shadow-sm text-lg">PDF</span>
         </div>
-        <p className="mt-1 text-sm text-slate-500">Professional, private, and accurate PDF Q&A.</p>
+        <p className="mt-3 text-sm text-slate-500 max-w-2xl">Professional, private, and accurate PDF Q&A.</p>
       </div>
 
-      <div className="ml-6 hidden sm:flex items-center gap-3">
-        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium shadow-sm">📚 AI Assistant</span>
+      {/* Right side: placeholder aligns with chat column */}
+      <div className="flex items-center justify-end">
+        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium shadow-sm hidden sm:inline-flex">📚Your AI Assistant</span>
       </div>
     </div>
-  </div>
 
-  {/* <div className="mt-4 flex items-center justify-center">
-    <div className="w-72 h-[2px] rounded bg-gradient-to-r from-indigo-100 via-sky-100 to-emerald-100" />
-  </div> */}
+    
+  </div>
 </header>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -97,7 +98,7 @@ function App() {
         </div>
 
         <footer className="mt-10 text-center text-xs text-slate-400">
-          Made with ❤️ · Keep your documents private — no third-party uploads
+          Made with ❤️ by Sourav Malviya · Keep your documents private — no third-party uploads
         </footer>
       </div>
     </div>
