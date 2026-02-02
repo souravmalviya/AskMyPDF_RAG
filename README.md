@@ -109,14 +109,6 @@ curl -s -X POST http://localhost:3000/api/chat \
 
 ## 📜 License & Notes
 
-- Add a `LICENSE` file as needed. Currently no license specified.
 - This project is intended for local/private document analysis — **do not** upload sensitive docs unless you control the environment.
 
----
 
-If you want, I can add:
-- Basic architecture diagram or screenshots
-- A short changelog entry for the UI improvements
-- A quick demo GIF showing upload -> chat flow
-
-Which would you like me to add next? (I can commit and push this README now.)
