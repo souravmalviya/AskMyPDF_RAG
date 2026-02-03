@@ -1,6 +1,6 @@
 # Ask My PDF 📚
 
-A lightweight RAG (Retrieval-Augmented Generation) app — upload PDFs, index their content as embeddings, and chat with your documents using a generative model.
+RAG (Retrieval-Augmented Generation) app --> upload PDFs, index their content as embeddings, and chat with your documents using a generative model.
 
 ---
 
