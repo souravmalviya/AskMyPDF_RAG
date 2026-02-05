@@ -9,7 +9,7 @@ export const chat = async (req, res) => {
     }
 
     const answer = await queryPdf(question, pdfId);
-    
+    //final op 
     res.json({ answer });
 
   } catch (error) {
