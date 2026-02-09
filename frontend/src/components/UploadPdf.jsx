@@ -79,6 +79,7 @@ const UploadPdf = ({ onUploadSuccess }) => {
         setError(true);
         setMessage(err.response?.data?.error || 'Failed to upload PDF.');
       }
+      setCurrentFile(null);
     } finally {
       setLoading(false);
       setProgress(0);
@@ -156,7 +157,7 @@ const UploadPdf = ({ onUploadSuccess }) => {
             <p className="text-sm">Uploading & processing... {progress ? `${progress}%` : ''}</p>
             <div className="w-full bg-gray-200 rounded h-2 mt-3 overflow-hidden">
               <div className="h-2 bg-blue-500" style={{ width: `${progress}%` }} />
-            </div>
+            </div>  
           </div>
         ) : (
           <div className="text-center text-gray-500">
