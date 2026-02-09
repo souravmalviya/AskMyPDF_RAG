@@ -98,7 +98,7 @@ function App() {
         </div>
 
         <footer className="mt-10 text-center text-xs text-slate-400">
-          Made with ❤️ by Sourav Malviya · Keep your documents private — no third-party uploads
+          Made with ❤️ by Sourav Malviya · Keep your documents private, no third-party uploads
         </footer>
       </div>
     </div>

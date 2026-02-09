@@ -1,7 +1,8 @@
 import express from 'express';
 import cors from 'cors';
-import uploadRoutes from './routes/upload.routes.js';
+
 import chatRoutes from './routes/chat.routes.js';
+import uploadRoutes from './routes/upload.routes.js';
 import pdfRoutes from './routes/pdf.routes.js';
 
 const app = express();
@@ -14,7 +15,7 @@ app.use('/api/chat', chatRoutes);
 app.use('/api/pdfs', pdfRoutes);
 
 app.get('/', (req, res) => {
-  res.send('RAG Backend is running');
+  res.json({ status: 'ok', message: 'RAG backend running' });
 });
 
 export default app;

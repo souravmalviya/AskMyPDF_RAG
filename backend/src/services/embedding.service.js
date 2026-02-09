@@ -25,7 +25,7 @@ export const generateEmbedding = async (text) => {
 
   try {
     const response = await aiClient.models.embedContent({
-      model: 'text-embedding-004',
+      model: 'models/gemini-embedding-001',
       // SDK expects a `contents` array where each item has `parts` with `text`.
       contents: [
         { parts: [{ text }] }
